@@ -5,9 +5,6 @@ Report repository. This repo holds the code that runs the frontend only.  Unless
 you know this is where you want to be, you're probably looking for the [TRR
 repo] itself. If you're looking for the frontend GUI, go [here].
 
-[TRR Repo]: https://github.edwardjones.com/ejsecure/technique-research-reports
-[here]: https://github.edwardjones.com/pages/ejsecure/trr-library/
-
 ## Configuring the TRR Library Frontend
 
 This frontend has been designed to support internally-hosted TRR repos. Simply copy the repo to an internal GitHub instance, and configure the backends.json file in the base of the repo to point at the public TRR Library and any other internal or external backends desired. For each backend to be included:
@@ -40,3 +37,6 @@ private repository hosted in company XYZ's internal GitHub.
   }
 ]
 ```
+
+[TRR Repo]: https://github.com/tired-labs/techniques
+[here]: https://library.threat-research.org

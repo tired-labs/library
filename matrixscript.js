@@ -9,8 +9,8 @@ var glblPlatforms = []; //global json object holding info about all supported pl
 // "RawIndexBaseUrl" is the URL (if remote) or path (if internal) of foldler holding the platforms.json and index.json for the backend.
 import glblBackends from "./backends.json" with { type: 'json' };
 
-//Define the base URL for the main TRR library backend. Used to build links to reference docs.
-const glblLibraryBaseUrl = "https://github.com/tired-labs/library/tree/main/"
+//Define the base URL for the main TRR repo backend. Used to build links to reference docs.
+const glblLibraryBaseUrl = "https://github.com/tired-labs/techniques/tree/main/"
 
 //Define Mitre tactics in the order we want them to appear in the matrix
 //This is needed because the tactics data has no inherent order

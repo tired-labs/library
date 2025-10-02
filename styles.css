@@ -1,0 +1,208 @@
+/* Reset default browser margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling for font and background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5; /* Light gray background for contrast */
+}
+
+/* Styling for the page header*/
+.page-header
+{
+  display: flex;
+  width: 100%;
+  background-color: #4a69bd; /* Soft blue background for the header */
+}
+
+
+/* Styling for the page title*/
+.page-title
+{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 2.5em;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 33%;
+}
+
+.view-toggle {
+  position: relative;
+  top: 10px;
+  width: 33%;
+  padding: 20px 0px;
+  text-align: center;
+  color: black;
+  .active {
+   color: #FFFFFF; 
+  }
+  .inactive {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/* Styling for the search input container */
+.search-container {
+  width: 33%;
+  position: relative;
+  top: 10px;
+  text-align: right;
+}
+
+/* Styling for the search input field */
+#searchInput {
+  width: 350px;
+  padding: 9px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px; /* Rounded edges for a modern look */
+  outline: none;
+  transition: box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Focus effect for the search input field */
+#searchInput:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Shadow effect on focus */
+}
+
+#showIntro {
+  float: right;
+  font-size: .75em;
+  right: 10%;
+  height: 20px;
+  padding: 4px;
+  position: fixed;
+  cursor: pointer; /* Indicate that the header is clickable */
+  display: none;
+  }
+
+#intro-container {
+  border: 1px solid gray;
+  padding: 8px;
+  width: 80%; /* Table width relative to the viewport */
+  margin: 20px auto; /* Center the table horizontally */
+  border-radius: 10px; /* Rounded corners for the table */
+  background-color: #fff; /* White background for table content */
+  position: relative;
+}
+
+.intro-x{
+  position: absolute;
+  right: 7px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.intro-title {
+  font-size: 1.5em;
+}
+
+/* Styling for the main table */
+table {
+  width: 80%; /* Table width relative to the viewport */
+  margin: 20px auto; /* Center the table horizontally */
+  border-collapse: collapse; /* Remove default spacing between cells */
+  overflow: hidden;
+  border-radius: 10px; /* Rounded corners for the table */
+  background-color: #fff; /* White background for table content */
+}
+
+/* Styling for the table header */
+thead {
+  background-color: #1e3799; /* Dark blue background for header */
+  color: #fff; /* White text for contrast */
+}
+
+/* Styling for header cells */
+thead th {
+  padding: 10px;
+  cursor: pointer; /* Indicate that the header is clickable */
+  position: relative;
+  user-select: none; /* Prevent text selection on double-click */
+}
+
+thead th.nosort {
+    cursor: default; /* No pointer for nonsortable columns*/
+  }
+
+/* Adding a sort indicator arrow to header cells */
+thead th.desc::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  border: 6px solid transparent; /* Create an arrow using borders */
+  border-top-color: #ffffff; /* White arrow pointing upwards */
+  transform: translateY(-50%);
+  top: 50%;
+  opacity: 0; /* Hide the arrow by default */
+  transition: opacity 0.2s ease; /* Smooth transition for arrow visibility */
+}
+
+thead th.asc::after {
+  content: '';
+  position: absolute;
+  right: 5px;
+  border: 6px solid transparent; /* Create an arrow using borders */
+  border-top-color: #FFFFFF; /* White arrow pointing upwards */
+  transform: rotate(180deg);
+  opacity: 0; /* Hide the arrow by default */
+  transition: opacity 0.2s ease; /* Smooth transition for arrow visibility */
+}
+
+/* Show the sort indicator arrow on header hover */
+thead th:hover::after {
+  opacity: 1; /* Make the arrow visible on hover */
+}
+
+/* Slightly darken the header cell on hover */
+thead th:hover {
+  background-color: #192e85; /* Make the arrow visible on hover */
+}
+
+/* Styling for table rows */
+tbody tr {
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer; /* Indicate that a row is clickable */
+}
+
+/* Alternate row background color for better readability */
+tbody tr:nth-child(even) {
+  background-color: #ebeced; /* Light gray for even rows */
+}
+
+/* Hover effect for table rows */
+tbody tr:hover {
+  background-color: #d4d5d9; /* Slightly darker gray on hover */
+}
+
+/* Styling for table data cells */
+td {
+  white-space: pre; 
+  padding: 15px;
+  text-align: left; /* Center-align text within cells */
+}
+
+/* Keyframe animation for row fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with invisible rows */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply the fade-in animation to table rows */
+tbody tr {
+  animation: fadeIn 0.5s ease-in;
+}

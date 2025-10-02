@@ -1,0 +1,190 @@
+/* Reset default browser margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling for font and background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5; /* Light gray background for contrast */
+}
+
+/* Styling for the page header*/
+.page-header
+{
+  display: flex;
+  width: 100%;
+  background-color: #4a69bd; /* Soft blue background for the header */
+}
+
+
+/* Styling for the page title*/
+.page-title
+{
+  position: relative;
+  top: 5px;
+  left: 5px;
+  font-size: 2.5em;
+  text-align: left;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  width: 33%;
+}
+
+.view-toggle {
+  position: relative;
+  top: 10px;
+  width: 33%;
+  padding: 20px 0px;
+  text-align: center;
+  color: black;
+  .active {
+   color: #FFFFFF; 
+  }
+  .inactive {
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.platform-container {
+  width: 33%;
+  position: relative;
+  top: 10px;
+  text-align: right;
+}
+
+/* Styling for the platform select */
+#platformSelect {
+  width: 300px;
+  padding: 9px 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 25px; /* Rounded edges for a modern look */
+  outline: none;
+  transition: box-shadow 0.3s ease; /* Smooth transition for focus effect */
+}
+
+/* Hover effect for the platform select */
+#platformSelect:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .7); /* Shadow effect on hover */
+}
+
+#showIntro {
+  float: right;
+  font-size: .75em;
+  right: 5%;
+  height: 20px;
+  padding: 4px;
+  position: fixed;
+  cursor: pointer; /* Indicate that the header is clickable */
+  display: none;
+  }
+
+#intro-container {
+  border: 1px solid gray;
+  padding: 8px;
+  width: 80%; /* Table width relative to the viewport */
+  margin: 10px auto; /* Center the table horizontally */
+  border-radius: 10px; /* Rounded corners for the table */
+  background-color: #fff; /* White background for table content */
+  position: relative;
+}
+
+.intro-x{
+  position: absolute;
+  right: 7px;
+  top: 3px;
+  cursor: pointer;
+}
+
+.intro-title {
+  font-size: 1.5em;
+}
+
+/* Styling for the main table */
+#matrixTable {
+  width: 90%; /* Table width relative to the viewport */
+  margin: 20px auto; /* Center the table horizontally */
+  overflow: hidden;
+}
+
+#matrixTable td {
+  vertical-align: top;
+}
+
+.tacticTable {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff; /* White background for table content */
+}
+
+.tacticTable tr:hover {
+  .tooltiptext {
+      visibility: visible;
+      opacity: .80;
+      transition: .25s all ease;
+      transition-delay: 1s;
+    }
+}
+
+.tacticTable td {
+  cursor: pointer;
+  border: solid;
+  border-width: 1px;
+  padding: 5px;
+  text-align: center; /* Center-align text within cells */
+  transition: background-color .8s ease; /* Smooth transition for hover effect */
+  &:hover {
+    background-color: #d4d5d9; /* Slightly darker gray on hover */
+  }
+}
+
+.tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  font-size: .9em;
+  position: absolute;
+  display: inline;
+  background-color: #fff; /* White background for tooltip content */
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  border: solid black 1px;
+  /* Position the tooltip */
+  z-index: 2;
+  transition: opacity 0s ease;
+  transition-delay: 0s;
+}
+
+/* Styling for the table header */
+.tacticTable th {
+  background-color: #1e3799; /* Dark blue background for header */
+  color: #fff; /* White text for contrast */
+  border: solid;
+  border-width: 1px;
+  border-color: black;
+  padding: 5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Keyframe animation for row fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with invisible rows */
+  }
+  to {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+/* Apply the fade-in animation to table rows */
+.tacticTable {
+  animation: fadeIn 0.5s ease-in;
+}

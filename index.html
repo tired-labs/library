@@ -1,0 +1,50 @@
+<html lang="en">
+  <head>
+    <!-- Character encoding for the HTML document -->
+    <meta charset="UTF-8" />
+    <!-- Title displayed on the browser tab -->
+    <title>TRR Library</title>
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Link to the external JavaScript file for interactivity -->
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <div class="page-header"> 
+    <div class="page-title">TRR Library</div>
+    <div class="view-toggle"><span class="active">table</span> | <a href="./matrixview.html" class="inactive">matrix</a></div>
+    <!-- Container for the search input field -->
+    <div class="search-container">
+      <!-- Text input for searching table data -->
+      <input type="text" id="searchInput" placeholder="Search..." />
+    </div>
+    </div> <!-- End header div -->
+    <span id="showIntro">show intro</span>
+    <!-- Box to introduce the repo -->
+    <div id="intro-container">
+      <span class="intro-title">Welcome to the Technique Research Report (TRR) Library! </span>
+      <span id="hideIntroX" class="intro-x">x</span>
+      <br><br>
+      <p>This is a collection of reports documenting attack technique research and modeling to assist cybersecurity practioners in understanding, emulating, and detecting cyber attacks. For more information on TRRs, see the <a id="TRRGuideRef" href="#">TRR Guide</a>. Questions about the project? See the <a id="ProjOverviewRef" href="#">Project Overview</a> and <a id="FAQRef" href="#">FAQ</a>. Want to contribute a TRR of your own? See the <a id="ContribGuide" href="#">Contribution Guide</a>.</p>
+    </div>
+    <!-- Main table element displaying data -->
+    <table id="dataTable">
+      <!-- Table header containing column titles -->
+      <thead>
+        <tr>
+          <!-- Table headers with custom data attributes for sorting functionality -->
+          <th data-column="id" class="desc">ID</th>
+          <th data-column="external_ids" class="desc">External IDs</th>
+          <th data-column="name" class="desc">Technique Name</th>
+          <th data-column="platforms" class="desc">Platforms</th>
+          <th data-column="procedures" class="nosort">Procedures</th>
+          <th data-column="source_repo" class="desc">Source</th>
+        </tr>
+      </thead>
+      <!-- Table body where data rows will be dynamically inserted -->
+      <tbody>
+        <!-- Table rows are populated by JavaScript based on the data array -->
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -129,7 +129,7 @@ function renderTable(data) {
     
     //set up each row using the right json values
     //clicking on the row opens a new window with the TRR.
-    row.onclick = function() { window.open(item['base_url'] + "reports/" + item['id'].toLowerCase() + "/" + glblPlatforms[item['platforms'][0]])};
+    row.onclick = function() { window.open(item['base_url'] + "reports/" + item['id'].toLowerCase() + "/" + glblPlatforms[item['platforms'][0]] + "/README.md")};
     //create the Primary ID cell
     const IDCell = document.createElement('td');
     IDCell.textContent = item['id'];

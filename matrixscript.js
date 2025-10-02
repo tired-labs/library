@@ -187,7 +187,7 @@ function renderMatrix(matrixData) {
           link = (trrEntry['id'].toLowerCase());
         } else {
           //technique-level - link is ID + short platform name (of the first platform, if multiple)
-          link = trrEntry['id'].toLowerCase() + "/" + glblPlatforms[trrEntry['platforms'][0]];
+          link = trrEntry['id'].toLowerCase() + "/" + glblPlatforms[trrEntry['platforms'][0]] + "/README.md";
         }
         tacticCell.onclick = function() { window.open(trrEntry['base_url'] + "reports/" + link) };
       });

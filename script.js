@@ -10,7 +10,7 @@ var glblPlatforms = []; //global json object holding info about all supported pl
 import glblBackends from "./backends.json" with { type: 'json' };
 
 //Define the base URL for the main TRR library backend. Used to build links to reference docs.
-const glblLibraryBaseUrl = "https://github.com/vanvleet/test2/tree/main/"
+const glblLibraryBaseUrl = "https://github.com/tired-labs/library/tree/main/"
 
 //Define Mitre tactics in the order we want them to appear in the matrix
 //This is needed because the tactics data has no inherent order

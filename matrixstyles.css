@@ -188,3 +188,11 @@ body {
 .tacticTable {
   animation: fadeIn 0.5s ease-in;
 }
+
+/* styling for logo at bottom of page */
+.logo
+{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

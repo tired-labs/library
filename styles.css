@@ -21,14 +21,15 @@ body {
 
 
 /* Styling for the page title*/
+
 .page-title
 {
   position: relative;
-  top: 5px;
+  display: flex;
   left: 5px;
   font-size: 2.5em;
   text-align: left;
-  vertical-align: middle;
+  align-items: center;
   text-transform: uppercase;
   color: #FFFFFF;
   width: 33%;
@@ -205,4 +206,12 @@ td {
 /* Apply the fade-in animation to table rows */
 tbody tr {
   animation: fadeIn 0.5s ease-in;
+}
+
+/* styling for logo at bottom of page */
+.logo
+{
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
